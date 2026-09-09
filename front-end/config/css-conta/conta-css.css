@@ -1,3 +1,8 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+
 :root{
     --cor-fontes-afins: #F97015;
     --cor-containers: rgb(255, 255, 255);
@@ -5,15 +10,17 @@
     --hover: #FFF3EB;
 }
 
-
-
 .container-conta{
-    width: 95%;
-    min-width: 1200px;
-    display: none;
-    margin-left: 250px;
-    margin-top: -45%;
+    width: calc(100% - 270px);
+    top: 80px;
+    left: 500px;
     position: absolute;
+    display: none;
+    flex-direction: column;
+}
+
+.container-conta.ativa{
+    display: block;
 }
 
 .container-conta input:focus{
@@ -24,10 +31,12 @@
 }
 .aba-email-idioma{
     width: 100%;
-    height: 300px;
+    height: auto;
+    padding: 20px;
     background-color: var(--fundo-de-abas);
     border-radius: 10px;
     box-shadow: 1px 1px 10px 5px rgba(0, 0, 0, 0.068);
+    margin-bottom: 20px;
 }
 .aba-email-idioma input{
     padding-left: 10px;
@@ -83,6 +92,7 @@
     width: 100%;
     margin-left: auto;
     margin-right: auto;
+    gap: 20px;
 }
 .idioma{
     display: flex;
@@ -223,7 +233,8 @@
 
 .excluir-conta{
     width: 100%;
-    height: 150px;
+    height: auto;
+    padding: 20px;
     border-radius: 10px;
     box-shadow: 1px 1px 10px 5px rgba(255, 0, 0, 0.068);
     border: 1px solid rgba(255, 0, 0, 0.705);
@@ -241,8 +252,8 @@
     color: var(--colorTextCinza);
 }
 .excluir-conta button{
-    margin-left: 20px;
-    margin-top: 15px;
+    margin-left: 0px;
+    margin-top: 10px;
     border-radius: 10px;
     height: 45px;
     width: 160px;
